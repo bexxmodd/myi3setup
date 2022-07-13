@@ -1,7 +1,5 @@
-# myi3-setup
-Configure my Laptop
+# My i3 Setup
 
-## How to run it
 #### Install Pre-reqs
 ```
 $ sudo pacman -S ansible i3        (for Arch Linux)
