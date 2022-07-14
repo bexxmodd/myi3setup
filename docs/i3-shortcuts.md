@@ -35,10 +35,3 @@
 |mod+r|(up,down,left,right) Resize current window|
 |mod+Ctrl+r|Restart i3|
 |mod+Ctrl+Del|Show (e)xit, (h)ibernate, (r)eboot, (s)hutdown (o)ption|
-
-# Apps
-pavucontrol         : for audio settings
-xrandr              : i3 screen settings manager (save layout as a sh file and add to the config for Autostart apps)
-arandr              : screen settings (GUI)
-feh                 : for setting wallpaper
-lxappearance        : to customize window appearance
