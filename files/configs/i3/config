@@ -2,7 +2,7 @@
 set $mod Mod1
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 2
+new_window pixel 1
 new_float normal
 
 # Hide borders
@@ -27,10 +27,11 @@ bindsym $mod+d layout toggle split
 # Enable touchpad natural scrolling
 #exec_always --no-startup-id xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Natural Scrolling Enabled" 1
 
-bindsym $mod+Return exec alacritty 
+bindsym $mod+Shift+Return exec alacritty 
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+f exec gnome-terminal -e ranger
 bindsym $mod+Shift+e exec neovim 
+bindsym $mod+Shift+s exec steam
 
 bindsym $mod+space --release exec "rofi -combi-modi drun,window,ssh -show combi -modi combi"
 bindsym $mod+q kill
@@ -50,10 +51,10 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id pulseaudio
-exec --no-startup-id volumeicon
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 exec --no-startup-id i3-msg "workspace 1: ; exec alacritty"
+exec --no-startup-id volumeicon
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -110,6 +111,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
+assign [class="alacritty"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Steam"] $ws4
 
